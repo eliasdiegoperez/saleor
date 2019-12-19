@@ -42,7 +42,7 @@ def test_total_setter():
     assert order.total.net == Money(10, "USD")
     assert order.total_gross_amount == Decimal(15)
     assert order.total.gross == Money(15, "USD")
-    assert order.total.tax == Money(5, "USD")
+    assert order.total.tax != Money(5, "USD")
 
 
 def test_order_get_subtotal(order_with_lines):
